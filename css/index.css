@@ -1,0 +1,2091 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+   --primary-purple: #6E36F7; /* Основной фиолетовый */
+   --white: #FFFFFF;          /* Белый */
+   --accent-red: #FF4D4D;     /* Акцентный красный */
+}
+
+
+/* Global styles */
+body {
+   margin: 0 auto;
+   padding: 0;
+   background-color: rgb(240, 237, 237);
+   color: white;
+   width: 100%;
+   font-family: 'Inter' sans-serif;
+ }
+ header, main, article, footer {
+   max-width: 1200px; /* Максимальная ширина контента */
+   margin: 0 auto;
+ }
+ 
+ /* Header styles */
+ header {
+   font-family: 'Inter', sans-serif;
+   background-color: var(--primary-purple);
+ }
+ .class-navbar {
+   width: 1200px;
+   margin: 0 auto;
+ }
+ 
+ .top-bar {
+   display: flex;
+   justify-content: flex-end;
+   padding: 10px 50px;
+   align-items: center;
+ }
+
+ .header-links {
+   display: flex;
+   gap: 20px;
+}
+
+ 
+ .header-links a {
+   color: white;
+   text-decoration: none;
+   margin-right: 20px;
+   font-size: 14px;
+ }
+
+
+ .arrow-selector::after {
+   content: url(/media/assets/bullet.svg);
+  
+   width: 12px;
+   height: 12px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin-left: 4px;
+ }
+ 
+
+
+ .language-wrapper {
+   position: relative;
+   display: flex;
+   align-items: center;
+   border: none;
+   padding: 5px 10px;
+   width: max-content;
+}
+
+.language-wrapper::before {
+   content: "";
+   display: block;
+   width: 16px;
+   height: 16px;
+   background-image: url('/media/assets/lang.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin-right: 8px;
+}
+
+select {
+   border: none;
+   background: transparent;
+   font-size: 12px;
+   color: white;
+   cursor: pointer;
+   outline: none;
+}
+main {
+   background-color: var(--primary-purple);
+ }
+ 
+ .main-header {
+   padding: 0 50px;
+ }
+ 
+ .main-header h1 {
+   color: #e19191;
+   font-size: 36px;
+   margin-bottom: 30px;
+   font-weight: normal;
+   font-family: 'Inter'sans-serif;
+ }
+ 
+ /* Tabs navigation */
+ .tabs {
+   display: flex;
+  
+   /* margin-bottom: 20px; */
+ }
+ 
+ .tab {
+   margin-bottom: 10px;
+   padding: 10px 20px;
+   background-color: rgba(255, 255, 255, 0.2);
+   border-radius: 25px;
+   color: white;
+   text-decoration: none;
+   margin-right: 10px;
+   font-size: 14px;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .tab.active {
+   background-color: white;
+   color: black;
+ }
+ 
+ .discount {
+   background-color: #7dce13;
+   color: white;
+   padding: 2px 5px;
+   border-radius: 8px;
+   font-size: 12px;
+   margin-left: 5px;
+ }
+
+ 
+ /* Search section */
+
+ .class-search {
+   padding: 0 40px 60px;
+ }
+ 
+ .search-container {
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+   /* overflow: hidden; */
+   margin-bottom: 15px;
+ }
+ 
+ .search-form {
+   display: flex;
+   flex: 1;
+   padding: 10px;
+
+ }
+ 
+ .input-group {
+   background-color: #fff;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   padding: 5px 10px;
+   border-right: 1px solid #eee;
+   flex: 1;
+   font-family: 'Inter', sans-serif;
+ }
+
+ .input-label.first {
+   margin-top: 10px;
+
+ }
+
+ .input-label.last {
+   margin-top: 10px;
+ }
+ 
+ .input-group:first-child {
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+.input-group.passenger-select {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+ 
+ .input-label {
+   color: #888;
+   font-size: 12px;
+   margin-bottom: 5px;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .input-label.where {
+   margin-left: 10px;
+ }
+
+  .input-label.where, .there, .back {
+   margin-top: 20px;
+   font-size: 16px;
+ }
+  
+ .input-field {
+   border: none;
+   font-size: 16px;
+   color: #333;
+   width: 100%;
+   outline: none;
+   background: transparent;
+ }
+
+ .img-calendar {
+   position: absolute;
+   right: 20px; /* Размещаем ближе к правой границе поля */
+   top: 50%;
+   transform: translateY(-50%); /* Центрируем по вертикали */
+   pointer-events: none; /* Чтобы иконка не мешала вводу */
+}
+ 
+ .search-button {
+   background-color: var(--accent-red);
+   color: white;
+   border: none;
+   border-radius: 5px;
+   padding: 0 40px;
+   margin-left: 4px;
+   font-size: 16px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: background-color 0.9s ease;
+ }
+ .search-button:hover {
+   background-color: #db2777;
+}
+ 
+ .swap-button {
+   background: white;
+   border: 1px solid var(--accent-red);
+   border-radius: 50%;
+   width: 30px;
+   height: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   margin: auto 0;
+   position: relative;
+   z-index: 2;
+   margin-left: -15px;
+   margin-right: -15px;
+ }
+ 
+ .tudasuda {
+   width: 15px;
+   height: 15px;
+ }
+
+
+
+
+ /* выпадающи список откуда  */
+
+
+ .dropdown-there {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 200%;
+   color: #504f4f;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   z-index: 10;
+   max-width: 600px;
+   max-height: 220px;
+   overflow-y: auto;
+}
+
+.select-city {
+   font-family: 'Inter', sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   margin-left: 20px;
+   margin-bottom: 0;
+}
+
+.dropdown-item {
+   padding: 10px 15px;
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+}
+
+.dropdown-item:hover {
+   background-color: #f0f0f0;
+}
+
+.city-name {
+   font-weight: 300;
+}
+
+.city-name::before {
+   content: url('/media/assets/map-marker.svg');
+   margin-right: 10px;
+   vertical-align: middle;
+}
+
+.city-code.first-line::after {
+   content: url('/media/assets/close-smooth.svg');
+}
+
+.first-sity {
+   font-weight: 700;
+}
+
+.city-code {
+   color: #888;
+}
+
+
+
+/* выпадающий список куда  */
+
+
+.dropdown-where {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 200%;
+   color: #504f4f;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   z-index: 10;
+   max-width: 600px;
+   max-height: 220px;
+   overflow-y: auto;
+}
+
+.city-name::before {
+   margin-left: 15px;
+}
+ 
+ 
+ 
+
+/* Выпадающий список пассажиров */
+.passenger-dropdown {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 300px;
+   background: white;
+   border-radius: 16px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   padding: 16px;
+   margin-top: 8px;
+   z-index: 1000;
+   font-family: 'Inter', sans-serif;
+ }
+ 
+ .passenger-dropdown.hidden {
+   display: none;
+ }
+ 
+ /* Блок с ограничением количества пассажиров */
+ .passenger-limit {
+   font-size: 12px;
+   font-family: 'Inter', sans-serif;
+   color: #666;
+   margin-bottom: 15px;
+   padding-bottom: 10px;
+   /* border-bottom: 1px solid #eee; */
+ }
+ 
+ /* Стили для типа пассажира */
+ .passenger-type {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin-bottom: 20px;
+ }
+ 
+ /* Стили для информации о пассажире */
+ .passenger-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ /* Стили для категории пассажира */
+ .passenger-category {
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+   display: flex;
+   align-items: center;
+ }
+ 
+ /* Стили для иконки информации */
+ .info-icon {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   background-color: white;
+   color: #666;
+   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+   font-size: 12px;
+   margin-left: 5px;
+   cursor: help;
+ }
+ 
+ /* Стили для возраста пассажира */
+ .passenger-age {
+   font-size: 12px;
+   color: #999;
+   margin-top: 3px;
+ }
+ 
+ /* Стили для счетчика */
+ .counter {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+ 
+ /* Стили для кнопок счетчика */
+ .counter-btn {
+   width: 30px;
+   height: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   border-radius: 50%;
+   background-color: #f8f8f8;
+   font-size: 16px;
+   color: #999;
+   cursor: pointer;
+   transition: background-color 0.2s;
+ }
+
+ .counter-btn.plus {
+   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .counter-btn:hover {
+   background-color: #eee;
+ }
+ 
+ .counter-btn:disabled {
+   opacity: 0.5;
+   cursor: not-allowed;
+ }
+ 
+ /* Стили для поля ввода количества пассажиров */
+ .passenger-count {
+   width: 30px;
+   height: 30px;
+   border: none;
+   text-align: center;
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+   -moz-appearance: textfield;
+ }
+ 
+ .passenger-count::-webkit-outer-spin-button,
+ .passenger-count::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+ 
+ /* Стили для выбора класса */
+ .class-selection {
+   border-top: 1px solid #eee;
+   padding-top: 15px;
+   margin-bottom: 20px;
+ }
+
+ input[type="radio"] {
+   appearance: none;
+   
+ }
+
+ .castom {
+   padding: 8px 16px;
+   border-radius: 20px;
+   border: none;
+   background: #f3f4f6;
+   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+   color: white;
+   font-size: 14px;
+   font-family: 'Inter', sans-serif;
+   cursor: pointer;
+ }
+
+ .castom.castom-active {
+   background: var(--accent-red);
+   color: white;
+   box-shadow: none;
+ }
+ 
+ .class-label {
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+   margin-bottom: 10px;
+ }
+ 
+ .class-options {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+ }
+ 
+ .radio-option {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .radio-option input[type="radio"] {
+   margin-right: 5px;
+ }
+ 
+ .radio-option label {
+   font-size: 14px;
+   color: #333;
+   cursor: pointer;
+ }
+ 
+ /* Стили для кнопки ОК */
+ .ok-button {
+   width: 100%;
+   padding: 10px;
+   background-color: var(--accent-red);
+   color: white;
+   border: none;
+   border-radius: 4px;
+   font-size: 14px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: background-color 0.2s;
+ }
+ 
+ .ok-button:hover {
+   background-color: #3a80d2;
+ }
+
+
+
+    /* сложный маршрут */
+    
+ .complex-route {
+   display: inline-block;
+   color: rgb(249, 247, 247);
+   text-decoration: none;
+   font-size: 14px;
+   font-family: 'Inter', sans-serif;
+   margin-top: 5px;
+}
+ 
+ .complex-route:before {
+   content: "";
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   background-image: url("/media/assets/multiroute.svg");
+   background-size: contain;
+   margin-right: 5px;
+   margin-left: 10px;
+   vertical-align:sub;
+ }
+
+
+ /* календарь */
+
+ .calendar-container {
+   background: #fff;
+   border: 0;
+   border-radius: 2px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   z-index: 1000;
+ }
+
+ .calendar-container.hidden {
+   display: none;
+   top: 100%;
+   left: -195px;
+ }
+ 
+ .calendar {
+   position: relative;
+   --highlight-color: rgba(247, 64, 105, 1);
+   --highlight-transparent-color: color(srgb 0.9992 0.9106 0.9296);
+   --lighter-text-color: #666;
+   --font-size-smaller: 87.5%;
+   --font-size-smallest: 75%;
+ }
+ 
+ .calendar-header {
+   align-items: baseline;
+   display: grid;
+   grid-template-columns: repeat(2, 50%);
+   margin-bottom: 1.6em;
+ }
+ 
+ .calendar-label {
+   font-weight: 500;
+ }
+ 
+ .calendar-date-control {
+   background: var(--highlight-transparent-color);
+   border: 0;
+   border-radius: 5px;
+   color: var(--highlight-color);
+   font-size: var(--font-size-smaller);
+   line-height: 2.4rem;
+   width: 100%;
+ }
+ 
+ .calendar-month-control {
+   background: transparent;
+   border: 0;
+   font-size: 0;
+   position: absolute;
+ }
+ 
+ .calendar-month-control::before {
+   /* TODO: Заменить на картинку */
+   color: #bbb;
+   font-size: 16px;
+ }
+ 
+ .calendar-month-control-rev {
+   left: 0;
+ }
+ 
+ .calendar-month-control-rev::before {
+   content: url('/media/assets/chevron-smooth.svg');
+   display: inline-block;
+   transform: rotate(90deg);
+ }
+ 
+ .calendar-month-control-fwd {
+   right: 0;
+ }
+ 
+ .calendar-month-control-fwd::before {
+   content: url('/media/assets/chevron-smooth.svg');
+   display: inline-block;
+   transform: rotate(-90deg);
+ }
+ 
+ .calendar-month-name {
+   font-size: var(--font-size-smaller);
+   text-align: center;
+   line-height: 2rem;
+   white-space: nowrap;
+ }
+ 
+ .calendar-dates {
+   align-items: flex-start;
+   display: flex;
+   gap: 25px;
+ }
+ 
+ .calendar-month-date-names,
+ .calendar-month-dates-days {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .calendar-month-dates-days {
+   gap: 0.4rem 0;
+ }
+ 
+ .calendar-month-date-names li,
+ .calendar-month-dates-days li {
+   font-size: var(--font-size-smaller);
+   line-height: 2.5rem;
+   min-width: 3rem;
+   text-align: center;
+ }
+ 
+ .calendar-month-date-names li {
+   color: var(--lighter-text-color);
+   font-size: var(--font-size-smallest);
+   font-weight: 500;
+ }
+ 
+ .calendar-month-dates-day-past {
+   color: #ccc;
+ }
+ 
+ .calendar-month-dates-day-today {
+   background: #ccc;
+ }
+ 
+ .calendar-month-dates-day-today,
+ .calendar-month-dates-day-from,
+ .calendar-month-dates-day-to {
+   border-radius: 0 0 5px 5px;
+   position: relative;
+ }
+ 
+ .calendar-month-dates-day-today::before,
+ .calendar-month-dates-day-from::before,
+ .calendar-month-dates-day-to::before {
+   border-radius: 5px 5px 0 0;
+   font-size: 60%;
+   line-height: 1.5;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 100%
+ }
+ 
+ .calendar-month-dates-day-today::before {
+   background: #ccc;
+   content: "Сегодня";
+ }
+ 
+ .calendar-month-dates-day-from,
+ .calendar-month-dates-day-to {
+   background: var(--highlight-color);
+   color: #fff;
+ }
+ 
+ .calendar-month-dates-day-from::before,
+ .calendar-month-dates-day-to::before {
+   background: var(--highlight-color);
+ }
+ 
+ .calendar-month-dates-day-from::before {
+   content: "Туда"
+ }
+ 
+ .calendar-month-dates-day-to::before {
+   content: "Обратно"
+ }
+ 
+ .calendar-month-dates-day-in-range {
+   background: rgba(254, 234, 246, 1);
+ }
+ 
+ .calendar-note {
+   color: var(--lighter-text-color);
+   font-size: var(--font-size-smallest);
+   margin-top: 1rem;
+ }
+ 
+ .calendar-note::before {
+   content: "👉";
+   margin-right: 0.5rem;
+ }
+
+
+ /* Первые 2 карточки */
+
+ .cards-container {
+   display: flex;
+   gap: 20px;
+   padding: 20px 50px;
+   font-family: "Inter", sans-serif;
+}
+
+.card {
+   background: white;
+   border-radius: 8px;
+   padding: 16px;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+   flex: 1;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.card-content {
+   max-width: 70%;
+}
+
+.card-image {
+   margin-top: auto;
+   width: 30%;
+   object-fit: contain;
+}
+
+.card-title {
+   color: #2c3e50;
+   font-size: 16px;
+   margin: 0 0 16px 0;
+   line-height: 1.3;
+}
+
+.features {
+   list-style: none;
+   padding: 0;
+   margin: 0 0 20px 0;
+}
+
+.feature-item {
+   color: #878787;
+   margin-bottom: 8px;
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+}
+
+.feature-item::before {
+   content: "✓";
+   color: #4CAF50;
+   margin-right: 8px;
+}
+
+.button {
+   display: inline-block;
+   padding: 12px 24px;
+   border-radius: 8px;
+   text-decoration: none;
+   font-weight: 500;
+   transition: background-color 0.9s ease;
+}
+
+.button-pink {
+   background-color: #FFE8E8;
+   color: #FF4D4D;
+}
+
+.button-pink:hover {
+   background-color: var(--accent-red);
+   color: white;
+}
+
+.button-red {
+   background-color: var(--accent-red);
+   color: white;
+   margin-top: 30px;
+}
+
+.button-red:hover {
+   background-color: #db2777;
+}
+
+
+
+
+/* основной контент */
+/* популярные направления */
+
+.first-line {
+  display: flex; /* Включаем Flexbox */
+  justify-content: space-between; /* Распределяем пространство между блоками */
+  align-items: flex-start; /* Выравниваем блоки по верхнему краю */
+  gap: 20px; /* Отступ между блоками */
+}
+
+.popular-directions {
+   font-family: Inter, sans-serif;
+   width: 100%;
+}
+.heading {
+   color: #333;
+   font-size: 18px;
+   margin-left: 52px;
+   margin-bottom: 15px;
+}
+
+.directions-container {
+   background: white;
+   border-radius: 8px;
+   padding: 15px;
+   margin-left: 50px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+   /* width: 55%; */
+}
+
+.direction-row {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 15px;
+   padding-bottom: 15px;
+   border-bottom: 1px solid #f0f0f0;
+}
+
+.direction-row:last-child {
+   margin-bottom: 0;
+   padding-bottom: 0;
+   border-bottom: none;
+}
+
+.direction {
+   display: flex;
+   justify-content: space-between;
+   width: 45%;
+}
+
+.route {
+   font-size: 14px;
+   color: #555;
+   text-decoration: none;
+}
+
+.route:hover {
+   color: #0066cc;
+}
+
+.price {
+   color: var(--accent-red);
+   font-size: 14px;
+   white-space: nowrap;
+}
+
+.arrow {
+   color: #999;
+   margin: 0;
+}
+
+/* ТОП-10 */
+
+.airlines-container {
+   font-family: Arial, sans-serif;
+   width: 45%;
+   margin-right: 50px;
+   margin-top: 8px;
+   
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 10px;
+   margin-bottom: 12px;
+}
+.top10 {
+   text-transform: uppercase;
+}
+
+
+.title {
+   font-size: 18px;
+   color: #333;
+   margin: 0;
+}
+
+.more-link {
+   color: #4285f4;
+   text-decoration: none;
+}
+
+.more-link:hover {
+   text-decoration: underline;
+}
+
+.ratings-card {
+   background: white;
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.airline-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2px 0;
+}
+
+.rank {
+   width: 30px;
+   color: #666;
+   font-size: 14px;
+   font-weight: 300;
+}
+
+.airline-name {
+   flex-grow: 1;
+   color: #4285f4;
+   text-decoration: none;
+   font-size: 14px;
+   /* margin: 0 15px; */
+}
+
+.airline-name:hover {
+   text-decoration: underline;
+}
+
+.rating-container {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.rating {
+   color: #333;
+   font-size: 14px;
+   font-weight: 300;
+}
+.rating::before {
+   content: "★"; 
+   color: var(--accent-red); 
+   margin-right: 5px;
+ }
+
+
+ /* нижняя часть из 3 контейнеров */
+ /* hot sales  */
+
+
+ .wrapper {
+   max-width: 1200px;
+   /* margin: 0 auto; */
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; /* Чтобы заголовок прижимался влево */
+}
+.header-container {
+   display: flex;
+   justify-content: space-between; /* Распределяем заголовки по краям */
+   align-items: center; 
+   width: 100%;
+   margin-bottom: 10px; 
+}
+
+
+.faq-title {
+   max-width: 35%; /* Даем заголовку ограничение по ширине */
+   margin: 0 250px 0 0;
+   color: #333;
+   font-family: 'Inter', sans-serif;
+   font-size: 18px;
+   margin-top: 50px;
+   margin-left: 50px;
+   margin-bottom: 10px;
+   text-align: left;
+   flex-basis: auto;
+   max-width: 60%;
+   white-space: nowrap;
+}
+
+/* Контейнер с контентом */
+.second-line {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-start;
+   width: 100%;
+   /* gap: 20px; */
+   max-width: 1200px;
+   margin: 0 50px 50px 50px;
+}
+
+
+/* Колонка с вопросами */
+.right-column {
+   width: 29%;
+   display: flex;
+   flex-direction: column;
+   margin: 0 105px 0 0;
+   gap: 20px;
+}
+
+.main-title {
+   color: #333;
+   font-family: Inter, sans-serif;
+   font-size: 18px;
+   margin-top: 50px;
+   margin-left: 50px;
+   margin-bottom: 10px;
+   text-align: left;
+   flex-basis: auto;
+   max-width: 60%;
+   white-space: nowrap;
+}
+ 
+
+
+.content-wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 10px;
+}
+
+.sales-container {
+   width: 59%;
+   background-color: white;
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.section-title {
+   color: #333;
+   margin: 10px 0 15px 0;
+   font-size: 18px;
+   font-family: Inter, sans-serif;
+}
+
+.section-content {
+   color: #666;
+   line-height: 1.6;
+   margin-bottom: 20px;
+   font-family: Inter, sans-serif;
+}
+
+.faq-container {
+   background-color: white;
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.faq-list {
+   list-style-type: none;
+   padding-inline-start: 10px;
+}
+
+.faq-item {
+   margin-bottom: 15px;
+}
+
+.faq-link {
+   color: #4a90e2;
+   text-decoration: none;
+   font-size: 16px;
+   font-family: Inter, sans-serif;
+   display: block;
+   padding: 5px 0;
+}
+
+.faq-link:hover {
+   text-decoration: underline;
+}
+
+
+ /* подписаться  */
+
+
+ .subscription-container {
+   background-color: #dddeff; 
+   border-radius: 8px;
+   padding: 30px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+   width: 83%; 
+   margin-top: 20px;
+ }
+
+.subscription-container .content-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 30px;
+}
+
+.subscription-container .title {
+   color: #434343;
+   font-size: 18px;
+   font-weight: 500;
+   font-family: Inter, sans-serif;
+   max-width: 60%;
+   line-height: 1.3;
+}
+
+.img-laptop {
+   width: 120px;
+   height: auto;
+}
+
+.form-group {
+   display: flex;
+   width: 100%;
+   position: relative;
+}
+
+.email-input {
+   flex-grow: 1;
+   padding: 14px 20px;
+   border: 1px solid var(--accent-red);
+   border-radius: 8px;
+   font-size: 14px;
+   outline: none;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.email-input:focus {
+   border-color: #4a90e2;
+}
+
+.submit-button {
+   position: absolute;
+   right: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: var(--accent-red); 
+   color: white;
+   border: none;
+   border-radius: 8px;
+   width: 45px;
+   height: 40px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.submit-arrow {
+   font-size: 0; /* скрывает текст */
+}
+
+.submit-button::after {
+   content: url('/media/assets/chevron-smooth.svg');
+   font-size: 18px;
+   fill: white !important;
+   transform: rotate(-90deg);
+}
+
+
+/* футер */
+
+footer {
+   background-color: #ffffff; 
+   color: #333; 
+   padding: 10px 20px;
+   max-width: 1055px;
+}
+.sponsores {
+   display: flex; /* Включаем Flexbox */
+   justify-content: space-between;
+   align-items: center; /* Выравниваем элементы по вертикали по центру */
+
+   padding: 10px 0; /* Отступы сверху и снизу */
+
+}
+
+
+.footer-content {
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   gap: 20px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #e0e0e0; /* Граница между секциями */
+}
+
+.footer-section h3 {
+   font-size: 18px;
+   font-weight: 700;
+   margin-bottom: 15px;
+   color: #333; /* Темный цвет заголовков */
+}
+
+.footer-section ul {
+   list-style: none;
+   padding: 0;
+}
+
+.footer-section ul li {
+   margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+   color: #666666; /* Серый цвет ссылок */
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+   color: #000000; /* Черный цвет при наведении */
+   text-decoration: underline;
+}
+
+.all-option {
+   color: dodgerblue;
+}
+
+.footer-bottom {
+   display: flex;
+   justify-content: space-between; /* Распределяет пространство между группами */
+   align-items: center; /* Выравнивает элементы по вертикали */
+   /* padding-top: 20px; */
+}
+
+.left-group {
+   display: flex;
+   align-items: center;
+   gap: 20px; /* Расстояние между элементами в левой группе */
+}
+
+.ttn-first-svg img {
+   height: 100px; /* Размер логотипа TTN */
+   width: auto; /* Сохраняет пропорции */
+}
+
+.partner-program a {
+   color: dodgerblue;
+   text-decoration: none;
+   font-weight: 500;
+   padding: 10px 20px;
+   transition: color 0.3s ease;
+   border: 1px solid dodgerblue;
+   border-radius: 5px;
+}
+
+.partner-program a:hover {
+   color: #000000; /* Черный цвет при наведении */
+}
+
+.app-download a {
+   margin-right: 15px;
+}
+
+.app-download img {
+   height: 40px; /* Размер иконок приложений */
+}
+
+.social-media {
+   display: flex;
+   gap: 15px; /* Расстояние между иконками социальных сетей */
+}
+
+.social-media img {
+   height: 40px; /* Размер иконок социальных сетей */
+}
+
+.burger-menu {
+   display: none; /* Скрываем бургер на десктопе */
+   flex-direction: column;
+   cursor: pointer;
+   position: fixed; /* Фиксированное позиционирование */
+   top: 20px; /* Отступ сверху */
+   right: 20px; /* Отступ справа */
+   z-index: 1000; /* Убедитесь, что бургер поверх других элементов */
+}
+
+.burger-menu span {
+   width: 25px;
+   height: 3px;
+   background-color: #000;
+   margin: 4px 0;
+}
+
+
+/* адаптация для мобилки  */
+/* ///////////////////////////////////////////////////// */
+
+
+/* Media queries for mobile responsiveness (320px to 768px) */
+@media (max-width: 768px) {
+   /* Global container adjustments */
+   header, main, article, footer {
+     max-width: 100%;
+     padding: 0 15px;
+   }
+   
+   .class-navbar {
+     width: 100%;
+   }
+
+   
+   /* Hide desktop navigation links by default */
+   .header-links {
+     display: none;
+     position: absolute;
+     top: 60px;
+     left: 0;
+     width: 100%;
+     background-color: var(--primary-purple);
+     flex-direction: column;
+     padding: 15px;
+     z-index: 1000;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+   
+
+   
+   .header-links a {
+     margin: 10px 0;
+     font-size: 16px;
+     display: block;
+     padding: 8px 0;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     width: 100%;
+   }
+   
+   .header-links a:last-child {
+     border-bottom: none;
+   }
+
+   .language-wrapper select {
+      opacity: 0; /* Скрываем текст */
+      width: 44px; /* Ширина, чтобы оставить место для иконки */
+      position: absolute; 
+      z-index: 1; /* Помещаем поверх иконки */
+  }
+
+  .language-wrapper::before {
+      margin-right: 20px; /* Убираем отступ справа */
+      width: 32px; /* Увеличиваем ширину для мобильных */
+      height: 32px; /* Увеличиваем высоту для мобильных */
+  }
+
+   /* Burger menu button */
+   .burger-menu {
+     display: flex;
+     cursor: pointer;
+     top: 15px; /* Отступ сверху */
+     right: 50px; /* Отступ справа */
+     z-index: 1001;
+   }
+   
+   .burger-menu span {
+     display: block;
+     width: 25px;
+     height: 3px;
+     background-color: white;
+     margin: 4px 0;
+     transition: all 0.3s;
+   }
+   
+
+   /* Main header adjustments */
+   .main-header {
+     padding: 0 30px;
+   }
+   
+   .main-header h1 {
+     font-size: 36px;
+     margin-bottom: 20px;
+   }
+   
+   /* Tabs adjustments */
+   .tabs {
+     flex-wrap: wrap;
+     justify-content: flex-start;
+   }
+   
+   .tab {
+     margin-bottom: 10px;
+     padding: 8px 15px;
+     font-size: 12px;
+   }
+   
+   /* Search section adjustments */
+   .class-search {
+     padding: 0 15px 30px;
+   }
+   
+   .search-form {
+     flex-direction: column;
+   }
+   .input-group {
+      border-bottom: 1px solid lightgrey;
+   }
+   
+   .img-calendar {
+      right: 7%;
+      width: 20px;
+      height: 50px;
+   }
+   
+   
+   .input-group:first-child {
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 0;
+      padding: 10px 10px;
+   }
+   
+   .input-group.passenger-select {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 5px;
+      padding: 10px 10px;
+   }
+   
+   .input-group:last-child {
+     border-bottom: none;
+   }
+
+   .input-label.where {
+      margin-left: 0;
+    }
+   
+   .search-button {
+     margin-left: 0;
+     width: 100%;
+     padding: 28px 0;
+     margin-top: 20px;
+   }
+   
+   .swap-button {
+     position: absolute; /* Абсолютное позиционирование */
+     right: 12%;/* Центрирование по горизонтали */
+     top: calc(24% + 10px);
+     width: 40px;
+     height: 40px;
+     transform: translateX(-50%); /* Смещение на половину ширины кнопки */
+     transform: rotate(90deg);
+   }
+   .tudasuda {
+      width: 25px;
+      height: 25px;
+   }
+
+   #input-group-there,
+   #input-group-back {
+     display: inline-flex; 
+     flex: 1 1 48%; 
+   }
+   /* Passenger dropdown adjustments */
+   .passenger-dropdown {
+     width: 100%;
+     left: 0;
+     right: 0;
+   }
+   
+   /* Calendar adjustments */
+   .calendar-container {
+     width: 100%;
+     left: 0 !important;
+   }
+   
+   .calendar-dates {
+     flex-direction: column;
+     gap: 15px;
+   }
+
+
+
+     /* Cards container */
+
+  .cards-container {
+   flex-direction: column;
+   padding: 20px 15px;
+   gap: 15px;
+ }
+
+ .card {
+   width: 90%;
+   margin-left: 10px;
+   padding-right: 26px;
+   flex-direction: column;
+   align-items: flex-start;
+   border-radius: 8px;
+ }
+
+ .card-content {
+   max-width: 100%;
+   flex-direction: column;
+   margin-bottom: 15px;
+ }
+
+ .card-image {
+   display: none;
+ }
+
+ /* First line - popular directions and airlines */
+ .first-line {
+   flex-direction: column;
+   gap: 30px;
+ }
+
+ .popular-directions {
+   width: 97%;
+   margin: 0 10px;
+ }
+
+ .heading {
+   margin-left: 15px;
+   font-size: 18px;
+   font-weight: 600;
+ }
+
+ .directions-container {
+   margin-left: 15px;
+   margin-right: 15px;
+   padding-top: 0;
+   padding-left: 0;
+   width: auto;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   overflow: hidden;
+ }
+
+ /* Restructuring the directions to match the image */
+ .direction-row {
+   display: block;
+   margin-bottom: 0;
+   padding-bottom: 0;
+   border-bottom: none;
+ }
+
+ .direction {
+   width: 100%;
+   display: block;
+   border-bottom: 1px solid #f0f0f0;
+   border-top: 1px solid #f0f0f0;
+   padding: 12px 15px;
+ }
+
+ .direction:last-child {
+   border-bottom: none;
+ }
+
+ .route, .price {
+   display: block;
+ }
+
+ .route {
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+   margin-bottom: 4px;
+ }
+
+ .arrow {
+   color: #666;
+ }
+
+ .price {
+   font-size: 13px;
+   color: #FF4D4D;
+ }
+
+  /* Airlines container */
+  .airlines-container {
+   width: 92%;
+   margin:  25px;
+ }
+
+ /* Wrapper and second line */
+ .wrapper {
+   width: 100%;
+ }
+
+ .header-container {
+   display: none;
+ }
+ 
+ /* Add margin to create space for the headers */
+ .sales-container,
+ .faq-container {
+   margin-top: 45px; /* Adjust as needed */
+   margin-left: 10px;
+   position: relative;
+   width: 89%;
+ }
+ 
+ /* Position headers above their containers */
+ .sales-container::before,
+ .faq-container::before {
+   position: absolute;
+   top: -30px; /* Adjust to control spacing */
+   left: 0;
+   font-size: 18px;
+   font-weight: 600;
+   color: #333;
+   font-family: 'Inter', sans-serif;
+ }
+ 
+ /* Set the content for each header */
+ .sales-container::before {
+   content: "Горящие распродажи авиарейсов";
+ }
+ 
+ .faq-container::before {
+   content: "Частые вопросы";
+ } 
+
+ .section-title {
+   font-size: 16px;
+ }
+
+ .section-content {
+   font-size: 14px;
+ }
+
+ .main-title, .faq-title {
+   margin: 20px 15px 10px 15px;
+   max-width: 100%;
+   white-space: normal;
+ }
+
+ .second-line {
+   flex-direction: column;
+   margin: 0 15px;
+   gap: 20px;
+ }
+
+
+ .right-column {
+   width: 100%;
+   margin: 0;
+ }
+
+ .subscription-container {
+   width: 92%;
+   padding: 15px;
+   margin-left: 10px;
+   margin-bottom: 50px;
+   box-sizing: border-box;
+ }
+
+ .content-wrapper {
+   flex-direction: row;
+   gap: 15px;
+   margin-bottom: 15px;
+ }
+
+ .subscription-container .title {
+   max-width: 60%;
+   font-size: 20px;
+   text-align: left;
+   margin-left: 10px;
+ }
+
+ .img-laptop {
+   margin: 0 15fpx;
+   display: block;
+ }
+
+ .form-group {
+   position: relative;
+ }
+
+ .email-input {
+   padding: 12px 50px 12px 15px;
+   width: 100%;
+   box-sizing: border-box;
+ }
+
+ .submit-button {
+   right: 5px;
+   width: 40px;
+   height: 36px;
+ }
+
+
+
+/* footer  */
+
+footer {
+   padding: 0;
+   width: 100%;
+ }
+ 
+ .sponsores {
+   justify-content: space-between;
+   margin-left: 50px;
+   margin-right: 50px;
+ }
+ 
+ .footer-content {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
+   border-bottom: none;
+ }
+ 
+ .footer-section {
+   border-bottom: 1px solid #e0e0e0;
+   padding: 5px 20px;
+   position: relative;
+ }
+ 
+ .footer-section:first-child {
+   border-top: 1px solid #e0e0e0;
+ }
+ 
+ .footer-section h3 {
+   /* margin-bottom: 0;
+   margin-top: 0; */
+   margin: 0 40px;
+   font-size: 16px;
+   font-weight: 600;
+  display: flex;
+  align-items: center; /* Выравниваем текст вертикально по центру */
+  min-height: 30px; /* Минимальная высота для удобства нажатия */
+ }
+ 
+ .footer-section ul {
+   display: none; /* Hide lists by default */
+ }
+ 
+ /* Add arrow indicators */
+ .footer-section h3::after {
+   content: url('/media/assets/chevron-smooth.svg');
+   position: absolute;
+   right: 50px;
+   top: 25%;
+   transform: rotate(-90deg);
+   font-size: 20px;
+   
+
+ }
+ 
+ .all-option {
+   display: none; /* Hide "All" links */
+ }
+ 
+ /* Footer bottom section styling */
+ .footer-bottom {
+   flex-direction: column;
+   padding: 20px;
+   gap: 20px;
+ }
+ 
+ .left-group {
+   flex-direction: column;
+   width: 100%;
+   gap: 15px;
+ }
+ 
+ .partner-program {
+   width: 100%;
+   text-align: center;
+ }
+ 
+ .partner-program a {
+   width: 100%;
+   text-align: center;
+ }
+ 
+ .app-download {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 25px;
+ }
+ 
+ .app-download a {
+   margin-right: 0;
+ }
+ 
+ .social-media {
+   justify-content: center;
+   width: 100%;
+ }
+ 
+ .ttn-first-svg {
+   display: none;
+ }
+
+
+ /* Выпадающий список пассажиров */
+ .passenger-dropdown {
+   width: 100%; /* Занимает всю ширину экрана */
+   max-width: 600px; 
+   left: 50%; /* Центрирование по горизонтали */
+   transform: translateX(-50%); /* Смещение на половину ширины */
+   padding: 12px; /* Уменьшаем отступы */
+   border-radius: 12px; /* Уменьшаем радиус скругления */
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Уменьшаем тень */
+   margin-top: 5px; /* Уменьшаем отступ сверху */
+ }
+
+ /* Блок с ограничением количества пассажиров */
+ .passenger-limit {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+   margin-bottom: 10px; /* Уменьшаем отступ */
+   padding-bottom: 8px; /* Уменьшаем отступ */
+ }
+
+ /* Стили для типа пассажира */
+ .passenger-type {
+   gap: 10px; /* Уменьшаем отступы между элементами */
+   margin-bottom: 15px; /* Уменьшаем отступ */
+ }
+
+ /* Стили для категории пассажира */
+ .passenger-category {
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для иконки информации */
+ .info-icon {
+   width: 14px; /* Уменьшаем размер */
+   height: 14px; /* Уменьшаем размер */
+   font-size: 11px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для возраста пассажира */
+ .passenger-age {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для счетчика */
+ .counter {
+   gap: 8px; /* Уменьшаем отступы между элементами */
+ }
+
+ /* Стили для кнопок счетчика */
+ .counter-btn {
+   width: 28px; /* Уменьшаем размер */
+   height: 28px; /* Уменьшаем размер */
+   font-size: 14px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для поля ввода количества пассажиров */
+ .passenger-count {
+   width: 28px; /* Уменьшаем размер */
+   height: 28px; /* Уменьшаем размер */
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для выбора класса */
+ .class-selection {
+   padding-top: 10px; /* Уменьшаем отступ */
+   margin-bottom: 15px; /* Уменьшаем отступ */
+ }
+
+ .castom {
+   padding: 6px 12px; /* Уменьшаем отступы */
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+ .class-label {
+   font-size: 13px; /* Уменьшаем размер шрифта */
+   margin-bottom: 8px; /* Уменьшаем отступ */
+ }
+
+ .class-options {
+   gap: 8px; /* Уменьшаем отступы между элементами */
+ }
+
+ /* Стили для кнопки ОК */
+ .ok-button {
+   padding: 8px; /* Уменьшаем отступы */
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+/* календарь  */
+
+
+ .calendar-container {
+   width: 100%; /* Занимает всю ширину экрана */
+   max-width: 350px; /* Максимальная ширина */
+   /* left: 50%; 
+   transform: translateX(-50%);  */
+   padding: 10px; /* Уменьшаем отступы */
+   border-radius: 8px; /* Уменьшаем радиус скругления */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Уменьшаем тень */
+ }
+
+ .calendar-header {
+   grid-template-columns: 1fr; /* Одна колонка вместо двух */
+   margin-bottom: 1em; /* Уменьшаем отступ */
+ }
+
+ .calendar-date-control {
+   font-size: 12px; /* Уменьшаем размер шрифта */
+   line-height: 2rem; /* Уменьшаем высоту строки */
+   padding: 5px; /* Уменьшаем отступы */
+ }
+
+ .calendar-month-control {
+   font-size: 0; /* Убираем текст */
+ }
+
+ .calendar-month-control::before {
+   font-size: 14px; /* Уменьшаем размер иконки */
+ }
+
+ .calendar-month-name {
+   font-size: 14px; /* Уменьшаем размер шрифта */
+   line-height: 1.8rem; /* Уменьшаем высоту строки */
+ }
+
+ .calendar-dates {
+   flex-direction: column; /* Элементы располагаются вертикально */
+   gap: 15px; /* Уменьшаем отступы между месяцами */
+ }
+
+ .calendar-month-date-names,
+ .calendar-month-dates-days {
+   grid-template-columns: repeat(7, 1fr); /* Оставляем 7 колонок */
+   gap: 0.2rem; /* Уменьшаем отступы между днями */
+ }
+
+ .calendar-month-date-names li,
+ .calendar-month-dates-days li {
+   font-size: 12px; /* Уменьшаем размер шрифта */
+   line-height: 2rem; /* Уменьшаем высоту строки */
+   min-width: 2rem; /* Уменьшаем минимальную ширину */
+ }
+
+ .calendar-month-date-names li {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+ }
+
+ .calendar-month-dates-day-today,
+ .calendar-month-dates-day-from,
+ .calendar-month-dates-day-to {
+   border-radius: 4px; /* Уменьшаем радиус скругления */
+ }
+
+ .calendar-month-dates-day-today::before,
+ .calendar-month-dates-day-from::before,
+ .calendar-month-dates-day-to::before {
+   font-size: 50%; /* Уменьшаем размер шрифта */
+   line-height: 1.2; /* Уменьшаем высоту строки */
+ }
+
+ .calendar-note {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+   margin-top: 0.8rem; /* Уменьшаем отступ */
+ }
+
+ .calendar-note::before {
+   margin-right: 0.3rem; /* Уменьшаем отступ */
+ }
+
+
+
+/* выпадающий список откуда  */
+.dropdown-there {
+   width: 100%; /* Уменьшаем ширину до 100% */
+   max-width: 100%; /* Убираем ограничение по максимальной ширине */
+   left: 0; /* Выравниваем по левому краю */
+   right: 0; /* Выравниваем по правому краю */
+   border-radius: 4px; /* Уменьшаем скругление углов */
+   max-height: 180px; /* Уменьшаем максимальную высоту */
+}
+
+.select-city {
+   font-size: 14px; /* Уменьшаем размер шрифта */
+   margin-left: 10px; /* Уменьшаем отступ */
+}
+
+.dropdown-item {
+   padding: 8px 10px; 
+}
+
+.city-name::before {
+   margin-right: 5px; /* Уменьшаем отступ для иконки */
+}
+
+.city-code {
+   font-size: 12px; /* Уменьшаем размер шрифта для кода города */
+   margin-right: 10px;
+}
+
+
+.city-code.first-line {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative; /* Для абсолютного позиционирования иконки */
+    padding-right: 30px; /* Отступ для иконки */
+}
+
+.city-code.first-line::after {
+    content: url('/media/assets/close-smooth.svg');
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+
+}
+
+
+ 
