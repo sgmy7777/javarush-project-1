@@ -14,6 +14,11 @@
       <header>
          <section class="class-navbar">
             <div class="top-bar">
+               <div class="burger-menu" id="burger-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
                <div class="header-links">
                   <a href="#">Корпоративным клиентам</a>
                   <a href="#" class="arrow-selector">Авиабилеты</a>
@@ -44,234 +49,263 @@
          </section>
       </header>
 
-
-   <main>
-
-      <section class="class-search">
-         <div class="search-container">
-            <div class="search-form">
-               <div class="input-group">
-                  <label class="input-label first">Откуда</label>
-                  <input type="text" class="input-field first" value="Варшава">
-               </div>
-      
-               <button class="swap-button">
-                  <img class="tudasuda" src="./media/assets/swap.svg" alt="Поменять местами">
-              </button>
-      
-               <div class="input-group">
-                  <label class="input-label where">Куда</label>
-                  <input type="text" class="input-field">
-               </div>
-      
-               <div class="input-group">
-                  <label class="input-label there">Туда</label>
-                  <input type="text" class="input-field">
-                  <dialog class="calendar-container hidden" open>
-                     <div class="calendar">
-                       <div class="calendar-header">
-                         <div class="calendar-label">Выберите дату туда</div>
-                         <div class="calendar-date-controls">
-                           <button class="calendar-date-control">В одну сторону</button>
-                         </div>
-                       </div>
-                       <div class="calendar-controls">
-                         <button class="calendar-month-control calendar-month-control-rev">Назад</button>
-                         <button class="calendar-month-control calendar-month-control-fwd">Вперед</button>
-                       </div>
-                       <div class="calendar-dates">
-                         <div class="calendar-month">
-                           <div class="calendar-month-name">Сентябрь 2024</div>
-                           <div class="calendar-month-dates">
-                             <ul class="calendar-month-date-names">
-                               <li>пн</li>
-                               <li>вт</li>
-                               <li>ср</li>
-                               <li>чт</li>
-                               <li>пт</li>
-                               <li>сб</li>
-                               <li>вс</li>
-                             </ul>
-                             <ul class="calendar-month-dates-days">
-                               <li class="calendar-month-dates-day-past"></li>
-                               <li class="calendar-month-dates-day-past"></li>
-                               <li class="calendar-month-dates-day-past"></li>
-                               <li class="calendar-month-dates-day-past"></li>
-                               <li class="calendar-month-dates-day-past"></li>
-                               <li class="calendar-month-dates-day-past">1</li>
-                               <li class="calendar-month-dates-day-past">2</li>
-                               <li class="calendar-month-dates-day-past">3</li>
-                               <li class="calendar-month-dates-day-past">4</li>
-                               <li class="calendar-month-dates-day-past">5</li>
-                               <li class="calendar-month-dates-day-past">6</li>
-                               <li class="calendar-month-dates-day-past">7</li>
-                               <li class="calendar-month-dates-day-past">8</li>
-                               <li class="calendar-month-dates-day-past">9</li>
-                               <li class="calendar-month-dates-day-past">10</li>
-                               <li class="calendar-month-dates-day-past">11</li>
-                               <li class="calendar-month-dates-day-past">12</li>
-                               <li class="calendar-month-dates-day-past">13</li>
-                               <li class="calendar-month-dates-day-past">14</li>
-                               <li class="calendar-month-dates-day-past">15</li>
-                               <li class="calendar-month-dates-day-past">16</li>
-                               <li class="calendar-month-dates-day-past">17</li>
-                               <li class="calendar-month-dates-day-past">18</li>
-                               <li class="calendar-month-dates-day-past">19</li>
-                               <li class="calendar-month-dates-day-past">20</li>
-                               <li class="calendar-month-dates-day-past">21</li>
-                               <li class="calendar-month-dates-day-past">22</li>
-                               <li class="calendar-month-dates-day-past">23</li>
-                               <li class="calendar-month-dates-day-past">24</li>
-                               <li class="calendar-month-dates-day-past">24</li>
-                               <li class="calendar-month-dates-day-past">25</li>
-                               <li class="calendar-month-dates-day-past">26</li>
-                               <li class="calendar-month-dates-day-today">27</li>
-                               <li>28</li>
-                             </ul>
-                           </div>
-                         </div>
-                   
-                         <div class="calendar-month">
-                           <div class="calendar-month-name">Май 2024</div>
-                           <div class="calendar-month-dates">
-                             <ul class="calendar-month-date-names">
-                               <li>пн</li>
-                               <li>вт</li>
-                               <li>ср</li>
-                               <li>чт</li>
-                               <li>пт</li>
-                               <li>сб</li>
-                               <li>вс</li>
-                             </ul>
-                             <ul class="calendar-month-dates-days">
-                               <li></li>
-                               <li></li>
-                               <li></li>
-                               <li></li>
-                               <li></li>
-                               <li>1</li>
-                               <li>2</li>
-                               <li>3</li>
-                               <li>4</li>
-                               <li class="calendar-month-dates-day-from">5</li>
-                               <li class="calendar-month-dates-day-in-range">6</li>
-                               <li class="calendar-month-dates-day-in-range">7</li>
-                               <li class="calendar-month-dates-day-in-range">8</li>
-                               <li class="calendar-month-dates-day-in-range">9</li>
-                               <li class="calendar-month-dates-day-in-range">10</li>
-                               <li class="calendar-month-dates-day-in-range">11</li>
-                               <li class="calendar-month-dates-day-in-range">12</li>
-                               <li class="calendar-month-dates-day-in-range">13</li>
-                               <li class="calendar-month-dates-day-to">14</li>
-                               <li>15</li>
-                               <li>16</li>
-                               <li>17</li>
-                               <li>18</li>
-                               <li>19</li>
-                               <li>20</li>
-                               <li>21</li>
-                               <li>22</li>
-                               <li>23</li>
-                               <li>24</li>
-                               <li>24</li>
-                               <li>25</li>
-                               <li>26</li>
-                               <li>27</li>
-                               <li>28</li>
-                             </ul>
-                           </div>
-                         </div>
-                       </div>
-                       <div class="calendar-note">
-                         Для отображения цен необходимо выбрать маршрут
-                       </div>
-                       </div>
-                   </dialog>
-               </div>
-      
-               <div class="input-group">
-                  <label class="input-label back">Обратно
-                     <img class="img-calendar" src="./media/assets/calendar4.svg" alt="calendar" width="10px" height="10px">
-                  </label>
-                  <input type="text" class="input-field">
-               </div>
-      
-               <div class="input-group passenger-select">
-                  <label class="input-label last">Пассажиры, класс</label>
-                  <input type="text" class="input-field last" value="1 пассажир, любой" readonly>
-                  
-                  <div class="passenger-dropdown hidden">
-                      <div class="passenger-limit">Максимум 9 пассажиров</div>
-                      
-                      <div class="passenger-type">
-                        <div class="passenger-info">
-                            <div>
-                                <div class="passenger-category">Взрослые</div>
-                                <div class="passenger-age">старше 12 лет</div>
-                            </div>
-                            <div class="counter">
-                                <button class="counter-btn minus">−</button>
-                                <input type="number" class="passenger-count" min="1" max="9" value="1" aria-label="Количество взрослых пассажиров">
-                                <button class="counter-btn plus">+</button>  
-                            </div>
+      <main>
+         <section class="class-search">
+            <div class="search-container">
+               <div class="search-form">
+                  <div class="input-group">
+                     <label class="input-label first">Откуда</label>
+                     <input type="text" class="input-field first" value="Варшава">
+                     <div class="dropdown-there">
+                        <h3 class="select-city">Выбранный город</h3>
+                        <div class="dropdown-item">
+                            <span class="city-name first-sity">Варшава</span>
+                            <span class="city-code first-line">WAW</span>
                         </div>
-                        
-                        <div class="passenger-info">
-                            <div>
-                                <div class="passenger-category">Дети</div>
-                                <div class="passenger-age">2–12 лет</div>
-                            </div>
-                            <div class="counter">
-                                <button class="counter-btn minus">−</button>
-                                <input type="number" class="passenger-count" min="0" max="8" value="0" aria-label="Количество детей">
-                                <button class="counter-btn plus">+</button>
-                            </div>
+                        <h3 class="select-city">Ближайшие аэропорты</h3>
+                        <div class="dropdown-item">
+                            <span class="city-name">Кишинев</span>
+                            <span class="city-code">RMO</span>
                         </div>
-                        
-                        <div class="passenger-info">
-                            <div>
-                                <div class="passenger-category">Младенцы
-                                    <span class="info-icon">?</span>
-                                </div>
-                                <div class="passenger-age">до 2 лет</div>
-                            </div>
-                            <div class="counter">
-                                <button class="counter-btn minus">−</button>
-                                <input type="number" class="passenger-count" min="0" max="8" value="0" aria-label="Количество младенцев">
-                                <button class="counter-btn plus">+</button>
-                            </div>
+                        <div class="dropdown-item">
+                            <span class="city-name">Балице</span>
+                            <span class="city-code">KRK</span>
                         </div>
                     </div>
-              
-                    <div class="class-selection">
-                     <div class="class-label">Класс</div>
-                     <div class="class-options">
-                         <div class="radio-option">
-                             <input type="radio" id="class-any" name="travel-class" value="any" checked>
-                             <label class="castom castom-active" for="class-any">Любой</label>
-                         </div>
-                         <div class="radio-option">
-                             <input type="radio" id="class-business" name="travel-class" value="business">
-                             <label class="castom" for="class-business">Бизнес</label>
-                         </div>
-                         <div class="radio-option">
-                             <input type="radio" id="class-economy" name="travel-class" value="economy">
-                             <label class="castom" for="class-economy">Эконом</label>
-                         </div>
-                     </div>
-                 </div>
-              
-                      <button class="ok-button">ОК</button>
                   </div>
-              </div>
-      
-            <button class="search-button">Найти</button>
-         </div>
-      
-         <!-- добавить картинку в стилях -->
-         <a href="#" class="complex-route">Сложный маршрут</a>
-      </section>
-   </main>
+         
+                  <button class="swap-button">
+                     <img class="tudasuda" src="./media/assets/swap.svg" alt="Поменять местами">
+                  </button>
+         
+                  <div class="input-group kuda">
+                     <label class="input-label where">Куда</label>
+                     <input type="text" class="input-field">
+                     <div class="dropdown-where">
+                        <h3 class="select-city">Ближайшие аэропорты</h3>
+                        <div class="dropdown-item">
+                            <span class="city-name">Париж</span>
+                            <span class="city-code">PAR</span>
+                        </div>
+                        <div class="dropdown-item">
+                            <span class="city-name">Нью-Йорк</span>
+                            <span class="city-code">NYC</span>
+                        </div>
+                        <div class="dropdown-item">
+                           <span class="city-name">Лондон</span>
+                           <span class="city-code">LON</span>
+                       </div>
+                    </div>
+                  </div>
+         
+                  <div class="input-group" id="input-group-there">
+                     <label class="input-label there">Туда</label>
+                     <input type="text" class="input-field">
+                     <dialog class="calendar-container hidden" open>
+                        <div class="calendar">
+                        <div class="calendar-header">
+                           <div class="calendar-label">Выберите дату туда</div>
+                           <div class="calendar-date-controls">
+                              <button class="calendar-date-control">В одну сторону</button>
+                           </div>
+                        </div>
+                        <div class="calendar-controls">
+                           <button class="calendar-month-control calendar-month-control-rev">Назад</button>
+                           <button class="calendar-month-control calendar-month-control-fwd">Вперед</button>
+                        </div>
+                        <div class="calendar-dates">
+                           <div class="calendar-month">
+                              <div class="calendar-month-name">Сентябрь 2024</div>
+                              <div class="calendar-month-dates">
+                              <ul class="calendar-month-date-names">
+                                 <li>пн</li>
+                                 <li>вт</li>
+                                 <li>ср</li>
+                                 <li>чт</li>
+                                 <li>пт</li>
+                                 <li>сб</li>
+                                 <li>вс</li>
+                              </ul>
+                              <ul class="calendar-month-dates-days">
+                                 <li class="calendar-month-dates-day-past"></li>
+                                 <li class="calendar-month-dates-day-past"></li>
+                                 <li class="calendar-month-dates-day-past"></li>
+                                 <li class="calendar-month-dates-day-past"></li>
+                                 <li class="calendar-month-dates-day-past"></li>
+                                 <li class="calendar-month-dates-day-past">1</li>
+                                 <li class="calendar-month-dates-day-past">2</li>
+                                 <li class="calendar-month-dates-day-past">3</li>
+                                 <li class="calendar-month-dates-day-past">4</li>
+                                 <li class="calendar-month-dates-day-past">5</li>
+                                 <li class="calendar-month-dates-day-past">6</li>
+                                 <li class="calendar-month-dates-day-past">7</li>
+                                 <li class="calendar-month-dates-day-past">8</li>
+                                 <li class="calendar-month-dates-day-past">9</li>
+                                 <li class="calendar-month-dates-day-past">10</li>
+                                 <li class="calendar-month-dates-day-past">11</li>
+                                 <li class="calendar-month-dates-day-past">12</li>
+                                 <li class="calendar-month-dates-day-past">13</li>
+                                 <li class="calendar-month-dates-day-past">14</li>
+                                 <li class="calendar-month-dates-day-past">15</li>
+                                 <li class="calendar-month-dates-day-past">16</li>
+                                 <li class="calendar-month-dates-day-past">17</li>
+                                 <li class="calendar-month-dates-day-past">18</li>
+                                 <li class="calendar-month-dates-day-past">19</li>
+                                 <li class="calendar-month-dates-day-past">20</li>
+                                 <li class="calendar-month-dates-day-past">21</li>
+                                 <li class="calendar-month-dates-day-past">22</li>
+                                 <li class="calendar-month-dates-day-past">23</li>
+                                 <li class="calendar-month-dates-day-past">24</li>
+                                 <li class="calendar-month-dates-day-past">24</li>
+                                 <li class="calendar-month-dates-day-past">25</li>
+                                 <li class="calendar-month-dates-day-past">26</li>
+                                 <li class="calendar-month-dates-day-today">27</li>
+                                 <li>28</li>
+                              </ul>
+                              </div>
+                           </div>
+                     
+                           <div class="calendar-month">
+                              <div class="calendar-month-name">Май 2024</div>
+                              <div class="calendar-month-dates">
+                              <ul class="calendar-month-date-names">
+                                 <li>пн</li>
+                                 <li>вт</li>
+                                 <li>ср</li>
+                                 <li>чт</li>
+                                 <li>пт</li>
+                                 <li>сб</li>
+                                 <li>вс</li>
+                              </ul>
+                              <ul class="calendar-month-dates-days">
+                                 <li></li>
+                                 <li></li>
+                                 <li></li>
+                                 <li></li>
+                                 <li></li>
+                                 <li>1</li>
+                                 <li>2</li>
+                                 <li>3</li>
+                                 <li>4</li>
+                                 <li class="calendar-month-dates-day-from">5</li>
+                                 <li class="calendar-month-dates-day-in-range">6</li>
+                                 <li class="calendar-month-dates-day-in-range">7</li>
+                                 <li class="calendar-month-dates-day-in-range">8</li>
+                                 <li class="calendar-month-dates-day-in-range">9</li>
+                                 <li class="calendar-month-dates-day-in-range">10</li>
+                                 <li class="calendar-month-dates-day-in-range">11</li>
+                                 <li class="calendar-month-dates-day-in-range">12</li>
+                                 <li class="calendar-month-dates-day-in-range">13</li>
+                                 <li class="calendar-month-dates-day-to">14</li>
+                                 <li>15</li>
+                                 <li>16</li>
+                                 <li>17</li>
+                                 <li>18</li>
+                                 <li>19</li>
+                                 <li>20</li>
+                                 <li>21</li>
+                                 <li>22</li>
+                                 <li>23</li>
+                                 <li>24</li>
+                                 <li>24</li>
+                                 <li>25</li>
+                                 <li>26</li>
+                                 <li>27</li>
+                                 <li>28</li>
+                              </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="calendar-note">
+                           Для отображения цен необходимо выбрать маршрут
+                        </div>
+                        </div>
+                     </dialog>
+                  </div>
+         
+                  <div class="input-group" id="input-group-back">
+                     <label class="input-label back">Обратно
+                        <img class="img-calendar" src="./media/assets/calendar4.svg" alt="calendar" width="10px" height="10px">
+                     </label>
+                     <input type="text" class="input-field">
+                  </div>
+         
+                  <div class="input-group passenger-select">
+                     <label class="input-label last">Пассажиры, класс</label>
+                     <input type="text" class="input-field last" value="1 пассажир, любой" readonly>
+                     
+                     <div class="passenger-dropdown hidden">
+                        <div class="passenger-limit">Максимум 9 пассажиров</div>
+                        
+                        <div class="passenger-type">
+                           <div class="passenger-info">
+                              <div>
+                                 <div class="passenger-category">Взрослые</div>
+                                 <div class="passenger-age">старше 12 лет</div>
+                              </div>
+                              <div class="counter">
+                                 <button class="counter-btn minus">−</button>
+                                 <input type="number" class="passenger-count" min="1" max="9" value="1" aria-label="Количество взрослых пассажиров">
+                                 <button class="counter-btn plus">+</button>  
+                              </div>
+                           </div>
+                           
+                           <div class="passenger-info">
+                              <div>
+                                 <div class="passenger-category">Дети</div>
+                                 <div class="passenger-age">2–12 лет</div>
+                              </div>
+                              <div class="counter">
+                                 <button class="counter-btn minus">−</button>
+                                 <input type="number" class="passenger-count" min="0" max="8" value="0" aria-label="Количество детей">
+                                 <button class="counter-btn plus">+</button>
+                              </div>
+                           </div>
+                           
+                           <div class="passenger-info">
+                              <div>
+                                 <div class="passenger-category">Младенцы
+                                    <span class="info-icon">?</span>
+                                 </div>
+                                 <div class="passenger-age">до 2 лет</div>
+                              </div>
+                              <div class="counter">
+                                 <button class="counter-btn minus">−</button>
+                                 <input type="number" class="passenger-count" min="0" max="8" value="0" aria-label="Количество младенцев">
+                                 <button class="counter-btn plus">+</button>
+                              </div>
+                           </div>
+                        </div>
+               
+                     <div class="class-selection">
+                        <div class="class-label">Класс</div>
+                        <div class="class-options">
+                           <div class="radio-option">
+                              <input type="radio" id="class-any" name="travel-class" value="any" checked>
+                              <label class="castom castom-active" for="class-any">Любой</label>
+                           </div>
+                           <div class="radio-option">
+                              <input type="radio" id="class-business" name="travel-class" value="business">
+                              <label class="castom" for="class-business">Бизнес</label>
+                           </div>
+                           <div class="radio-option">
+                              <input type="radio" id="class-economy" name="travel-class" value="economy">
+                              <label class="castom" for="class-economy">Эконом</label>
+                           </div>
+                        </div>
+                     </div>
+               
+                        <button class="ok-button">ОК</button>
+                     </div>
+                  </div>
+         
+                  <button class="search-button">Найти</button>
+               </div>
+            </div>
+         
+            <a href="#" class="complex-route">Сложный маршрут</a>
+         </section>
+      </main>
       
 
       <article>

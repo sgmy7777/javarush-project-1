@@ -23,7 +23,7 @@ body {
  
  /* Header styles */
  header {
-  font-family: 'Inter', sans-serif;
+   font-family: 'Inter', sans-serif;
    background-color: var(--primary-purple);
  }
  .class-navbar {
@@ -37,6 +37,12 @@ body {
    padding: 10px 50px;
    align-items: center;
  }
+
+ .header-links {
+   display: flex;
+   gap: 20px;
+}
+
  
  .header-links a {
    color: white;
@@ -166,6 +172,7 @@ main {
    padding: 5px 10px;
    border-right: 1px solid #eee;
    flex: 1;
+   font-family: 'Inter', sans-serif;
  }
 
  .input-label.first {
@@ -258,6 +265,96 @@ main {
    width: 15px;
    height: 15px;
  }
+
+
+
+
+ /* выпадающи список откуда  */
+
+
+ .dropdown-there {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 200%;
+   color: #504f4f;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   z-index: 10;
+   max-width: 600px;
+   max-height: 220px;
+   overflow-y: auto;
+}
+
+.select-city {
+   font-family: 'Inter', sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   margin-left: 20px;
+   margin-bottom: 0;
+}
+
+.dropdown-item {
+   padding: 10px 15px;
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+}
+
+.dropdown-item:hover {
+   background-color: #f0f0f0;
+}
+
+.city-name {
+   font-weight: 300;
+}
+
+.city-name::before {
+   content: url('/media/assets/map-marker.svg');
+   margin-right: 10px;
+   vertical-align: middle;
+}
+
+.city-code.first-line::after {
+   content: url('/media/assets/close-smooth.svg');
+}
+
+.first-sity {
+   font-weight: 700;
+}
+
+.city-code {
+   color: #888;
+}
+
+
+
+/* выпадающий список куда  */
+
+
+.dropdown-where {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 200%;
+   color: #504f4f;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   z-index: 10;
+   max-width: 600px;
+   max-height: 220px;
+   overflow-y: auto;
+}
+
+.city-name::before {
+   margin-left: 15px;
+}
  
  
  
@@ -274,6 +371,7 @@ main {
    padding: 16px;
    margin-top: 8px;
    z-index: 1000;
+   font-family: 'Inter', sans-serif;
  }
  
  .passenger-dropdown.hidden {
@@ -283,6 +381,7 @@ main {
  /* Блок с ограничением количества пассажиров */
  .passenger-limit {
    font-size: 12px;
+   font-family: 'Inter', sans-serif;
    color: #666;
    margin-bottom: 15px;
    padding-bottom: 10px;
@@ -410,6 +509,7 @@ main {
    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
    color: white;
    font-size: 14px;
+   font-family: 'Inter', sans-serif;
    cursor: pointer;
  }
 
@@ -474,6 +574,7 @@ main {
    color: rgb(249, 247, 247);
    text-decoration: none;
    font-size: 14px;
+   font-family: 'Inter', sans-serif;
    margin-top: 5px;
 }
  
@@ -682,7 +783,7 @@ main {
    display: flex;
    gap: 20px;
    padding: 20px 50px;
-   font-family: Arial, sans-serif;
+   font-family: "Inter", sans-serif;
 }
 
 .card {
@@ -1247,6 +1348,744 @@ footer {
    height: 40px; /* Размер иконок социальных сетей */
 }
 
+.burger-menu {
+   display: none; /* Скрываем бургер на десктопе */
+   flex-direction: column;
+   cursor: pointer;
+   position: fixed; /* Фиксированное позиционирование */
+   top: 20px; /* Отступ сверху */
+   right: 20px; /* Отступ справа */
+   z-index: 1000; /* Убедитесь, что бургер поверх других элементов */
+}
 
-/* Media queries for responsive design */
+.burger-menu span {
+   width: 25px;
+   height: 3px;
+   background-color: #000;
+   margin: 4px 0;
+}
 
+
+/* адаптация для мобилки  */
+/* ///////////////////////////////////////////////////// */
+
+
+/* Media queries for mobile responsiveness (320px to 768px) */
+@media (max-width: 768px) {
+   /* Global container adjustments */
+   header, main, article, footer {
+     max-width: 100%;
+     padding: 0 15px;
+   }
+   
+   .class-navbar {
+     width: 100%;
+   }
+
+   
+   /* Hide desktop navigation links by default */
+   .header-links {
+     display: none;
+     position: absolute;
+     top: 60px;
+     left: 0;
+     width: 100%;
+     background-color: var(--primary-purple);
+     flex-direction: column;
+     padding: 15px;
+     z-index: 1000;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+   
+
+   
+   .header-links a {
+     margin: 10px 0;
+     font-size: 16px;
+     display: block;
+     padding: 8px 0;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     width: 100%;
+   }
+   
+   .header-links a:last-child {
+     border-bottom: none;
+   }
+
+   .language-wrapper select {
+      opacity: 0; /* Скрываем текст */
+      width: 44px; /* Ширина, чтобы оставить место для иконки */
+      position: absolute; 
+      z-index: 1; /* Помещаем поверх иконки */
+  }
+
+  .language-wrapper::before {
+      margin-right: 20px; /* Убираем отступ справа */
+      width: 32px; /* Увеличиваем ширину для мобильных */
+      height: 32px; /* Увеличиваем высоту для мобильных */
+  }
+
+   /* Burger menu button */
+   .burger-menu {
+     display: flex;
+     cursor: pointer;
+     top: 15px; /* Отступ сверху */
+     right: 50px; /* Отступ справа */
+     z-index: 1001;
+   }
+   
+   .burger-menu span {
+     display: block;
+     width: 25px;
+     height: 3px;
+     background-color: white;
+     margin: 4px 0;
+     transition: all 0.3s;
+   }
+   
+
+   /* Main header adjustments */
+   .main-header {
+     padding: 0 30px;
+   }
+   
+   .main-header h1 {
+     font-size: 36px;
+     margin-bottom: 20px;
+   }
+   
+   /* Tabs adjustments */
+   .tabs {
+     flex-wrap: wrap;
+     justify-content: flex-start;
+   }
+   
+   .tab {
+     margin-bottom: 10px;
+     padding: 8px 15px;
+     font-size: 12px;
+   }
+   
+   /* Search section adjustments */
+   .class-search {
+     padding: 0 15px 30px;
+   }
+   
+   .search-form {
+     flex-direction: column;
+   }
+   .input-group {
+      border-bottom: 1px solid lightgrey;
+   }
+   
+   .img-calendar {
+      right: 7%;
+      width: 20px;
+      height: 50px;
+   }
+   
+   
+   .input-group:first-child {
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 0;
+      padding: 10px 10px;
+   }
+   
+   .input-group.passenger-select {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 5px;
+      padding: 10px 10px;
+   }
+   
+   .input-group:last-child {
+     border-bottom: none;
+   }
+
+   .input-label.where {
+      margin-left: 0;
+    }
+   
+   .search-button {
+     margin-left: 0;
+     width: 100%;
+     padding: 28px 0;
+     margin-top: 20px;
+   }
+   
+   .swap-button {
+     position: absolute; /* Абсолютное позиционирование */
+     right: 12%;/* Центрирование по горизонтали */
+     top: calc(24% + 10px);
+     width: 40px;
+     height: 40px;
+     transform: translateX(-50%); /* Смещение на половину ширины кнопки */
+     transform: rotate(90deg);
+   }
+   .tudasuda {
+      width: 25px;
+      height: 25px;
+   }
+
+   #input-group-there,
+   #input-group-back {
+     display: inline-flex; 
+     flex: 1 1 48%; 
+   }
+   /* Passenger dropdown adjustments */
+   .passenger-dropdown {
+     width: 100%;
+     left: 0;
+     right: 0;
+   }
+   
+   /* Calendar adjustments */
+   .calendar-container {
+     width: 100%;
+     left: 0 !important;
+   }
+   
+   .calendar-dates {
+     flex-direction: column;
+     gap: 15px;
+   }
+
+
+
+     /* Cards container */
+
+  .cards-container {
+   flex-direction: column;
+   padding: 20px 15px;
+   gap: 15px;
+ }
+
+ .card {
+   width: 90%;
+   margin-left: 10px;
+   padding-right: 26px;
+   flex-direction: column;
+   align-items: flex-start;
+   border-radius: 8px;
+ }
+
+ .card-content {
+   max-width: 100%;
+   flex-direction: column;
+   margin-bottom: 15px;
+ }
+
+ .card-image {
+   display: none;
+ }
+
+ /* First line - popular directions and airlines */
+ .first-line {
+   flex-direction: column;
+   gap: 30px;
+ }
+
+ .popular-directions {
+   width: 97%;
+   margin: 0 10px;
+ }
+
+ .heading {
+   margin-left: 15px;
+   font-size: 18px;
+   font-weight: 600;
+ }
+
+ .directions-container {
+   margin-left: 15px;
+   margin-right: 15px;
+   padding-top: 0;
+   padding-left: 0;
+   width: auto;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   overflow: hidden;
+ }
+
+ /* Restructuring the directions to match the image */
+ .direction-row {
+   display: block;
+   margin-bottom: 0;
+   padding-bottom: 0;
+   border-bottom: none;
+ }
+
+ .direction {
+   width: 100%;
+   display: block;
+   border-bottom: 1px solid #f0f0f0;
+   border-top: 1px solid #f0f0f0;
+   padding: 12px 15px;
+ }
+
+ .direction:last-child {
+   border-bottom: none;
+ }
+
+ .route, .price {
+   display: block;
+ }
+
+ .route {
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+   margin-bottom: 4px;
+ }
+
+ .arrow {
+   color: #666;
+ }
+
+ .price {
+   font-size: 13px;
+   color: #FF4D4D;
+ }
+
+  /* Airlines container */
+  .airlines-container {
+   width: 92%;
+   margin:  25px;
+ }
+
+ /* Wrapper and second line */
+ .wrapper {
+   width: 100%;
+ }
+
+ .header-container {
+   display: none;
+ }
+ 
+ /* Add margin to create space for the headers */
+ .sales-container,
+ .faq-container {
+   margin-top: 45px; /* Adjust as needed */
+   margin-left: 10px;
+   position: relative;
+   width: 89%;
+ }
+ 
+ /* Position headers above their containers */
+ .sales-container::before,
+ .faq-container::before {
+   position: absolute;
+   top: -30px; /* Adjust to control spacing */
+   left: 0;
+   font-size: 18px;
+   font-weight: 600;
+   color: #333;
+   font-family: 'Inter', sans-serif;
+ }
+ 
+ /* Set the content for each header */
+ .sales-container::before {
+   content: "Горящие распродажи авиарейсов";
+ }
+ 
+ .faq-container::before {
+   content: "Частые вопросы";
+ } 
+
+ .section-title {
+   font-size: 16px;
+ }
+
+ .section-content {
+   font-size: 14px;
+ }
+
+ .main-title, .faq-title {
+   margin: 20px 15px 10px 15px;
+   max-width: 100%;
+   white-space: normal;
+ }
+
+ .second-line {
+   flex-direction: column;
+   margin: 0 15px;
+   gap: 20px;
+ }
+
+
+ .right-column {
+   width: 100%;
+   margin: 0;
+ }
+
+ .subscription-container {
+   width: 92%;
+   padding: 15px;
+   margin-left: 10px;
+   margin-bottom: 50px;
+   box-sizing: border-box;
+ }
+
+ .content-wrapper {
+   flex-direction: row;
+   gap: 15px;
+   margin-bottom: 15px;
+ }
+
+ .subscription-container .title {
+   max-width: 60%;
+   font-size: 20px;
+   text-align: left;
+   margin-left: 10px;
+ }
+
+ .img-laptop {
+   margin: 0 15fpx;
+   display: block;
+ }
+
+ .form-group {
+   position: relative;
+ }
+
+ .email-input {
+   padding: 12px 50px 12px 15px;
+   width: 100%;
+   box-sizing: border-box;
+ }
+
+ .submit-button {
+   right: 5px;
+   width: 40px;
+   height: 36px;
+ }
+
+
+
+/* footer  */
+
+footer {
+   padding: 0;
+   width: 100%;
+ }
+ 
+ .sponsores {
+   justify-content: space-between;
+   margin-left: 50px;
+   margin-right: 50px;
+ }
+ 
+ .footer-content {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
+   border-bottom: none;
+ }
+ 
+ .footer-section {
+   border-bottom: 1px solid #e0e0e0;
+   padding: 5px 20px;
+   position: relative;
+ }
+ 
+ .footer-section:first-child {
+   border-top: 1px solid #e0e0e0;
+ }
+ 
+ .footer-section h3 {
+   /* margin-bottom: 0;
+   margin-top: 0; */
+   margin: 0 40px;
+   font-size: 16px;
+   font-weight: 600;
+  display: flex;
+  align-items: center; /* Выравниваем текст вертикально по центру */
+  min-height: 30px; /* Минимальная высота для удобства нажатия */
+ }
+ 
+ .footer-section ul {
+   display: none; /* Hide lists by default */
+ }
+ 
+ /* Add arrow indicators */
+ .footer-section h3::after {
+   content: url('/media/assets/chevron-smooth.svg');
+   position: absolute;
+   right: 50px;
+   top: 25%;
+   transform: rotate(-90deg);
+   font-size: 20px;
+   
+
+ }
+ 
+ .all-option {
+   display: none; /* Hide "All" links */
+ }
+ 
+ /* Footer bottom section styling */
+ .footer-bottom {
+   flex-direction: column;
+   padding: 20px;
+   gap: 20px;
+ }
+ 
+ .left-group {
+   flex-direction: column;
+   width: 100%;
+   gap: 15px;
+ }
+ 
+ .partner-program {
+   width: 100%;
+   text-align: center;
+ }
+ 
+ .partner-program a {
+   width: 100%;
+   text-align: center;
+ }
+ 
+ .app-download {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 25px;
+ }
+ 
+ .app-download a {
+   margin-right: 0;
+ }
+ 
+ .social-media {
+   justify-content: center;
+   width: 100%;
+ }
+ 
+ .ttn-first-svg {
+   display: none;
+ }
+
+
+ /* Выпадающий список пассажиров */
+ .passenger-dropdown {
+   width: 100%; /* Занимает всю ширину экрана */
+   max-width: 600px; 
+   left: 50%; /* Центрирование по горизонтали */
+   transform: translateX(-50%); /* Смещение на половину ширины */
+   padding: 12px; /* Уменьшаем отступы */
+   border-radius: 12px; /* Уменьшаем радиус скругления */
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Уменьшаем тень */
+   margin-top: 5px; /* Уменьшаем отступ сверху */
+ }
+
+ /* Блок с ограничением количества пассажиров */
+ .passenger-limit {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+   margin-bottom: 10px; /* Уменьшаем отступ */
+   padding-bottom: 8px; /* Уменьшаем отступ */
+ }
+
+ /* Стили для типа пассажира */
+ .passenger-type {
+   gap: 10px; /* Уменьшаем отступы между элементами */
+   margin-bottom: 15px; /* Уменьшаем отступ */
+ }
+
+ /* Стили для категории пассажира */
+ .passenger-category {
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для иконки информации */
+ .info-icon {
+   width: 14px; /* Уменьшаем размер */
+   height: 14px; /* Уменьшаем размер */
+   font-size: 11px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для возраста пассажира */
+ .passenger-age {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для счетчика */
+ .counter {
+   gap: 8px; /* Уменьшаем отступы между элементами */
+ }
+
+ /* Стили для кнопок счетчика */
+ .counter-btn {
+   width: 28px; /* Уменьшаем размер */
+   height: 28px; /* Уменьшаем размер */
+   font-size: 14px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для поля ввода количества пассажиров */
+ .passenger-count {
+   width: 28px; /* Уменьшаем размер */
+   height: 28px; /* Уменьшаем размер */
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+ /* Стили для выбора класса */
+ .class-selection {
+   padding-top: 10px; /* Уменьшаем отступ */
+   margin-bottom: 15px; /* Уменьшаем отступ */
+ }
+
+ .castom {
+   padding: 6px 12px; /* Уменьшаем отступы */
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+ .class-label {
+   font-size: 13px; /* Уменьшаем размер шрифта */
+   margin-bottom: 8px; /* Уменьшаем отступ */
+ }
+
+ .class-options {
+   gap: 8px; /* Уменьшаем отступы между элементами */
+ }
+
+ /* Стили для кнопки ОК */
+ .ok-button {
+   padding: 8px; /* Уменьшаем отступы */
+   font-size: 13px; /* Уменьшаем размер шрифта */
+ }
+
+/* календарь  */
+
+
+ .calendar-container {
+   width: 100%; /* Занимает всю ширину экрана */
+   max-width: 350px; /* Максимальная ширина */
+   /* left: 50%; 
+   transform: translateX(-50%);  */
+   padding: 10px; /* Уменьшаем отступы */
+   border-radius: 8px; /* Уменьшаем радиус скругления */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Уменьшаем тень */
+ }
+
+ .calendar-header {
+   grid-template-columns: 1fr; /* Одна колонка вместо двух */
+   margin-bottom: 1em; /* Уменьшаем отступ */
+ }
+
+ .calendar-date-control {
+   font-size: 12px; /* Уменьшаем размер шрифта */
+   line-height: 2rem; /* Уменьшаем высоту строки */
+   padding: 5px; /* Уменьшаем отступы */
+ }
+
+ .calendar-month-control {
+   font-size: 0; /* Убираем текст */
+ }
+
+ .calendar-month-control::before {
+   font-size: 14px; /* Уменьшаем размер иконки */
+ }
+
+ .calendar-month-name {
+   font-size: 14px; /* Уменьшаем размер шрифта */
+   line-height: 1.8rem; /* Уменьшаем высоту строки */
+ }
+
+ .calendar-dates {
+   flex-direction: column; /* Элементы располагаются вертикально */
+   gap: 15px; /* Уменьшаем отступы между месяцами */
+ }
+
+ .calendar-month-date-names,
+ .calendar-month-dates-days {
+   grid-template-columns: repeat(7, 1fr); /* Оставляем 7 колонок */
+   gap: 0.2rem; /* Уменьшаем отступы между днями */
+ }
+
+ .calendar-month-date-names li,
+ .calendar-month-dates-days li {
+   font-size: 12px; /* Уменьшаем размер шрифта */
+   line-height: 2rem; /* Уменьшаем высоту строки */
+   min-width: 2rem; /* Уменьшаем минимальную ширину */
+ }
+
+ .calendar-month-date-names li {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+ }
+
+ .calendar-month-dates-day-today,
+ .calendar-month-dates-day-from,
+ .calendar-month-dates-day-to {
+   border-radius: 4px; /* Уменьшаем радиус скругления */
+ }
+
+ .calendar-month-dates-day-today::before,
+ .calendar-month-dates-day-from::before,
+ .calendar-month-dates-day-to::before {
+   font-size: 50%; /* Уменьшаем размер шрифта */
+   line-height: 1.2; /* Уменьшаем высоту строки */
+ }
+
+ .calendar-note {
+   font-size: 11px; /* Уменьшаем размер шрифта */
+   margin-top: 0.8rem; /* Уменьшаем отступ */
+ }
+
+ .calendar-note::before {
+   margin-right: 0.3rem; /* Уменьшаем отступ */
+ }
+
+
+
+/* выпадающий список откуда  */
+.dropdown-there {
+   width: 100%; /* Уменьшаем ширину до 100% */
+   max-width: 100%; /* Убираем ограничение по максимальной ширине */
+   left: 0; /* Выравниваем по левому краю */
+   right: 0; /* Выравниваем по правому краю */
+   border-radius: 4px; /* Уменьшаем скругление углов */
+   max-height: 180px; /* Уменьшаем максимальную высоту */
+}
+
+.select-city {
+   font-size: 14px; /* Уменьшаем размер шрифта */
+   margin-left: 10px; /* Уменьшаем отступ */
+}
+
+.dropdown-item {
+   padding: 8px 10px; 
+}
+
+.city-name::before {
+   margin-right: 5px; /* Уменьшаем отступ для иконки */
+}
+
+.city-code {
+   font-size: 12px; /* Уменьшаем размер шрифта для кода города */
+   margin-right: 10px;
+}
+
+
+.city-code.first-line {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative; /* Для абсолютного позиционирования иконки */
+    padding-right: 30px; /* Отступ для иконки */
+}
+
+.city-code.first-line::after {
+    content: url('/media/assets/close-smooth.svg');
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+
+}
+
+
+ 
