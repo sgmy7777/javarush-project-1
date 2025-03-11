@@ -51,6 +51,12 @@ body {
    font-size: 14px;
  }
 
+ .header-links a:hover {
+   color: var(--accent-red);
+ }
+
+ 
+
 
  .arrow-selector::after {
    content: url(/media/assets/bullet.svg);
@@ -61,7 +67,7 @@ body {
    background-repeat: no-repeat;
    margin-left: 4px;
  }
- 
+
 
 
  .language-wrapper {
@@ -72,6 +78,7 @@ body {
    padding: 5px 10px;
    width: max-content;
 }
+
 
 .language-wrapper::before {
    content: "";
@@ -238,9 +245,10 @@ main {
    font-size: 16px;
    cursor: pointer;
    font-weight: bold;
-   transition: background-color 0.9s ease;
+   transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
  }
  .search-button:hover {
+   transform: scale(1.05); /* Увеличение */
    background-color: #db2777;
 }
  
@@ -297,12 +305,17 @@ main {
    margin-bottom: 0;
 }
 
+
 .dropdown-item {
    padding: 10px 15px;
    display: flex;
+   align-items: center; 
    justify-content: space-between;
    cursor: pointer;
 }
+
+
+
 
 .dropdown-item:hover {
    background-color: #f0f0f0;
@@ -318,9 +331,19 @@ main {
    vertical-align: middle;
 }
 
-.city-code.first-line::after {
-   content: url('/media/assets/close-smooth.svg');
+.city-code.first-line {
+   position: absolute;
+   right: 50px;
 }
+
+.city-code.first-line2 {
+   position: absolute;
+   right: 50px;
+}
+
+/* .city-code.first-line::after {
+   content: url('/media/assets/close-smooth.svg');
+} */
 
 .first-sity {
    font-weight: 700;
@@ -334,42 +357,36 @@ main {
 
 /* выпадающий список куда  */
 
-
-.dropdown-where {
+.dropdown-there.where {
    display: none;
-   position: absolute;
-   top: 100%;
-   left: 0;
-   width: 200%;
-   color: #504f4f;
-   border: 1px solid #ccc;
-   border-radius: 8px;
-   background-color: white;
-   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-   z-index: 10;
-   max-width: 600px;
-   max-height: 220px;
-   overflow-y: auto;
 }
+
 
 .city-name::before {
    margin-left: 15px;
 }
- 
- 
- 
+.city-code {
+   color: #888;
+}
 
+.input-field.second {
+   margin-left: 10px;
+}
+
+
+ 
+ 
+ 
 /* Выпадающий список пассажиров */
 .passenger-dropdown {
    position: absolute;
    top: 100%;
    left: 0;
-   width: 300px;
+   width: 155%;
    background: white;
-   border-radius: 16px;
+   border-radius: 5px;
    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
    padding: 16px;
-   margin-top: 8px;
    z-index: 1000;
    font-family: 'Inter', sans-serif;
  }
@@ -385,7 +402,6 @@ main {
    color: #666;
    margin-bottom: 15px;
    padding-bottom: 10px;
-   /* border-bottom: 1px solid #eee; */
  }
  
  /* Стили для типа пассажира */
@@ -457,7 +473,7 @@ main {
    cursor: pointer;
    transition: background-color 0.2s;
  }
-
+ 
  .counter-btn.plus {
    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
  }
@@ -495,24 +511,24 @@ main {
    padding-top: 15px;
    margin-bottom: 20px;
  }
-
+ 
  input[type="radio"] {
    appearance: none;
-   
  }
-
+ 
  .castom {
    padding: 8px 16px;
    border-radius: 20px;
    border: none;
    background: #f3f4f6;
-   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-   color: white;
+   color: #333;
    font-size: 14px;
    font-family: 'Inter', sans-serif;
    cursor: pointer;
+   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
  }
-
+ 
  .castom.castom-active {
    background: var(--accent-red);
    color: white;
@@ -543,7 +559,6 @@ main {
  
  .radio-option label {
    font-size: 14px;
-   color: #333;
    cursor: pointer;
  }
  
@@ -558,12 +573,14 @@ main {
    font-size: 14px;
    font-weight: 500;
    cursor: pointer;
-   transition: background-color 0.2s;
+   transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
  }
  
  .ok-button:hover {
-   background-color: #3a80d2;
+   transform: scale(1.01);
+   background-color: #e31a4c;
  }
+
 
 
 
@@ -902,6 +919,22 @@ main {
    margin-bottom: 15px;
    padding-bottom: 15px;
    border-bottom: 1px solid #f0f0f0;
+
+   /* Изначальное состояние карточек направлений: 
+   - прозрачные (opacity: 0)
+   - немного сдвинуты вниз (translateY(20px))
+   - плавный эффект появления (transition) */
+   opacity: 0;  
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* После добавления класса .show (в JS):
+   - карточки становятся видимыми (opacity: 1)
+   - возвращаются на место (translateY(0)) */
+.direction-row.show {
+   opacity: 1;
+   transform: translateY(0);
 }
 
 .direction-row:last-child {
@@ -914,6 +947,11 @@ main {
    display: flex;
    justify-content: space-between;
    width: 45%;
+   transition: transform 0.3s ease-in; /* Плавное изменение масштаба */
+}
+
+.direction:hover {
+   transform: scale(1.05); /* Увеличение на 5% */
 }
 
 .route {
@@ -1200,7 +1238,7 @@ main {
 
 .email-input {
    flex-grow: 1;
-   padding: 14px 20px;
+   padding: 14px 75px 14px 10px;
    border: 1px solid var(--accent-red);
    border-radius: 8px;
    font-size: 14px;
@@ -1218,11 +1256,12 @@ main {
    top: 50%;
    transform: translateY(-50%);
    background-color: var(--accent-red); 
+   margin-left: 5px;
    color: white;
    border: none;
    border-radius: 8px;
    width: 45px;
-   height: 40px;
+   height: 46px;
    cursor: pointer;
    display: flex;
    justify-content: center;
@@ -1750,14 +1789,14 @@ footer {
 
  .email-input {
    padding: 12px 50px 12px 15px;
-   width: 100%;
+   width: 250%;
    box-sizing: border-box;
  }
 
  .submit-button {
    right: 5px;
-   width: 40px;
-   height: 36px;
+   width: 60px;
+   height: 42px;
  }
 
 
